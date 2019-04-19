@@ -1,0 +1,27 @@
+<p>
+  teste works!
+</p>
+
+<button type="button" (click)="listarcategorias()">Categorias</button>
+
+<br>
+Total de categorias: {{categorias.length}} <br>
+Categorias: <br>
+<div *ngFor="let item of categorias">
+  Código: {{item.id}}<br>
+  Nome: {{item.nome}}<br>
+</div>
+
+<br>
+<button type="button" (click)="listarlancamentos()">Lançamentos</button>
+
+<br>
+Total de lançamentos: {{categorias.length}} <br>
+Lançamentos: <br>
+<div *ngFor="let item of lancamentos">
+  Código: {{item.id}}<br>
+  Descrição: {{item.descricao}}<br>
+  Valor: {{item.valor}}<br>
+  Data: {{item.data | date: 'dd/MM/yyyy hh:mm'}}<br>
+  Tipo: {{item.Tipo}}<br>
+</div>
